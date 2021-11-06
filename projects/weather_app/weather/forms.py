@@ -5,7 +5,7 @@ from wtforms.validators import DataRequired, Length, Email, EqualTo
 import phonenumbers
 from weather.models import User
 import requests
-url = "https://api.openweathermap.org/data/2.5/weather?q={city_name}&units=imperial&appid=3c118b3f2bdd1585de7625953f54d47a"
+url = "https://api.openweathermap.org/data/2.5/weather?q={city_name}&units=imperial&appid=YOU_OPENWEATHER_API_KEY"
 
 
 
