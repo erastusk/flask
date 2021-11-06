@@ -1,0 +1,164 @@
+* {
+    font-family: 'Black Ops One', cursive;       
+    font-weight: 500; 
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    
+}
+
+.navbar {
+    height: 100%; 
+    background-color: #6C7C59;
+
+}
+.main-grid {
+    background-image: url("https://picsum.photos/id/178/1600");
+    /*178, 171*/
+    width: 100%;
+    min-height: 100vh;
+}
+/*
+.form-control, label, button{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}*/
+.btn {
+    
+    margin-top: 10px;
+    
+}
+.bi-geo-alt-fill, .bi-telephone {
+    color: lightskyblue;
+}
+
+
+.form-group{
+    margin-top: 5px;      
+}
+
+section {
+    position: absolute;
+}
+.container-signup{
+    position: relative;    
+    right: 0;
+    left: 0;
+    height: 100%;
+    bottom: 0;
+    margin: auto;
+    width: 25%;
+    padding: 1rem;
+    
+       
+}
+.container-contact{  
+    width: 60%;
+}
+.container-login{
+    width: 40%;
+}
+.container-home{
+    width: 100%;
+}
+
+
+.container-contact, .container-login, .container-signup {
+    position: relative;    
+    right: 0;
+    left: 0;
+    top: 0;
+    height: 100%;
+    bottom: 0;
+    margin: auto;
+    padding: 1rem;
+
+}
+
+
+.container-flash {
+  
+    width: 50%;
+    margin: auto;
+    color: red;
+    text-align: center;
+    font-family:cursive;
+    font-weight: bolder;
+    font-size: 1.5rem;
+    
+} 
+
+.card-title, .card-text {
+    text-align: center;
+    
+}
+.col-3 {
+    padding: 0;
+    width: fit-content;
+    border: 1px solid #6C7C59 ;
+    
+}
+.card-body {
+    padding: 0;
+
+}
+.row .col-3 {
+    margin: auto;
+}
+.form-home {
+    width: fit-content;  
+    padding: 8rem 0;
+         
+}
+ 
+.container-fluid .form-home, .h5 {
+    margin: auto;
+    
+}
+
+.profile-h5 {
+    width: fit-content;
+    padding-top: 2.5rem;
+    padding-bottom: 200px;
+    color: #660000;
+    font-size: 1.5rem;
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+}
+.button-profile {
+    height: 28px;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    padding: 0 5px;
+}
+
+.add-text {
+    text-align: center;
+    margin-top: 200px;
+    color: #FF00FF;
+    font-family:Arial, Helvetica, sans-serif;
+    font-style: italic;
+    font-weight: bolder;
+    font-size: 50px;
+}
+.text-center-home {
+    color: #00308F;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.5rem;
+    text-transform:uppercase;
+    font-weight: bold;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+
+}
+  .g-recaptcha iframe {
+    max-width: 100%;
+    transform:scale(0.77);
+    -webkit-transform:scale(0.77);
+    transform-origin: center center;
+    -webkit-transform-origin: center center;
+    
+  }
+
+  

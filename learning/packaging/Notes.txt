@@ -1,0 +1,11 @@
+__init__.py
+    __init__.py - Tells python this is a package    
+    Initializes app,db or any other type of class being used by the rest of the application, views, routes, models, etc
+    Pulls in everything that used the initialized instance of app - views, routes, models, etc
+app.py  
+    Imports instance of initialize app by __init__.py
+    Then runs that instance of application. *Required*
+
+Functions - Views, Models, db
+    Refers to everything that will need to use the initialized app and use any of its methods
+    And pretty much anyother initialized class by __init__, for example Flas instance, SQLAlchemy instance.    

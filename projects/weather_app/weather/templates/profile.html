@@ -1,0 +1,43 @@
+{% from '_form_macro.html' import form_helper %}
+
+
+{% extends "base.html" %}
+
+{% block nav %}  
+  <a class="nav-link" href="/contact">Contact Us</a>
+  <a class="nav-link" href="/logout">Logout</a>
+{% endblock nav %} 
+
+{% block showcase %}
+
+<div class="container-fluid">
+  <div class="h5 text-center" style="width: fit-content; background: #6C7C59; color: #00308F; font-size: 2rem;font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;"> {{ email }}'s Profile</div>
+  <div class="container-fluid">
+    <form class="form-home" action="/add_city" method="post"> 
+      <input required class="form-input" type="text" name="city" placeholder="Enter your city">    
+      <button type="submit" class="btn btn-dark button-profile" name="add_city">Add</button> 
+    </form> 
+    
+  </div>
+    <div class="container-fluid">
+      <div class="row">
+        {% for weather in cities %}
+        <div class="col-3">
+          <div class="card">
+            <div class="card-body">
+              <form method="post" action="">               
+                <button type="submit" class="btn-close btn-dark" name="close_city" value="{{ weather.city }}"></button>
+              </form>
+              <h5 class="card-title">{{ weather.city }}, {{weather.country}} <img src="https://openweathermap.org/images/flags/{{weather.country_flag}}.png" alt=""></h5>
+              <h1 class="card-title">{{ weather.temperature }}°</h1>
+              <img src="http://openweathermap.org/img/wn/{{weather.icon}}@4x.png"  alt="...">          
+              <p class="lead card-text ">{{ weather.description }} </p>
+              <p class="lead card-text"><span class="text-danger">H:{{ weather.high }}°
+              </span><span class="text-info">L:{{ weather.low }}°</span></p>
+            </div>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+    {% endblock showcase %}

@@ -1,0 +1,38 @@
+{% from '_form_macro.html' import form_helper %}
+
+
+{% extends "base.html" %}
+
+{% block nav %}  
+  <a class="nav-link" href="/contact">Contact Us</a>
+  <a class="nav-link" href="/signup">Sign Up</a>
+  <a class="nav-link" href="/signin">Sign In</a>
+{% endblock nav %} 
+
+{% block showcase %}
+
+<div class="container-fluid">  
+  <div class="h5 text-center-home" > Sign in to manage multiple cities</div>
+  <form class="form-home" action="/" method="post"> 
+    
+    <input required class="form-input" type="text" name="city" placeholder="Enter your city">      
+    <input class="form-input" type="submit">   
+  </form> 
+</div>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-3">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ weather.city }}, {{weather.country}} <img src="https://openweathermap.org/images/flags/{{weather.country_flag}}.png" alt=""></h5>
+          <h1 class="card-title">{{ weather.temperature }}°</h1>
+          <img src="http://openweathermap.org/img/wn/{{weather.icon}}@4x.png"  alt="...">          
+          <p class="lead card-text ">{{ weather.description }} </p>
+          <p class="lead card-text"><span class="text-danger">H:{{ weather.high }}°
+          </span><span class="text-info">L:{{ weather.low }}°</span></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock showcase %}

@@ -1,0 +1,24 @@
+{% from '_form_macro.html' import form_helper %}
+{% extends "base.html" %}
+
+{% block nav %}
+  <a class="nav-link" href="/signup">Sign Up</a>
+  <a class="nav-link" href="/signin">Sign In</a>
+{% endblock nav %}  
+{% block showcase %}
+    <div class="container text-center  pt-5">   
+        <div class="h1">Sign Up</div>   
+      <div class="container-signup bg-white">  
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">                
+                {{ form_helper(form.email)}}
+                {{ form_helper(form.password)}}
+                {{ form_helper(form.confirm_password)}}
+            </fieldset>
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+        <div class="text-muted pt-2">Already have an account? <a href="/signin">Sign In</a></div>
+    </div>
+    </div>  
+ {% endblock showcase %}

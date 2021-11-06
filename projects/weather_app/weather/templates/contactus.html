@@ -1,0 +1,57 @@
+{% from '_form_macro.html' import form_helper %}
+
+{% extends "base.html" %}
+
+{% block nav %}  
+  <a class="nav-link" href="/contact">Contact Us</a>
+  <a class="nav-link" href="/signin">Sign In</a>
+{% endblock nav %}  
+{% block showcase %}
+    <div class="container text-center">   
+      <div class="container-contact bg-white ">        
+        <div class="row mt-2">
+          <!--card -1-->
+          <div class=" col-lg-6 col-cards">
+            <div class="cards">
+              <div class="h1 pt-2">
+                <i class="bi bi-telephone"></i>
+              </div>                
+              <div class="card-body">
+                <h5 class="card-title">Call Us</h5>
+                <h6 class="card-subtitle pt-2">Headquarters (Toll-Free)</h6> 
+                <h6 class="cards-text">800.888.1000</h6>
+                <h6 class="card-subtitle pt-2">Headquarters </h6>
+                <h6 class="cards-text">801 801 1000</h6>
+              </div>
+            </div>            
+        </div>
+        <!--card -2-->
+        <div class="col-lg-6 col-cards">
+          <div class="cards">
+            <div class="h1 pt-2">
+              <i class="bi bi-geo-alt-fill"></i>
+            </div>                
+            <div class="card-body">
+              <h5 class="card-title">Come See Us</h5>
+              <h6 class="cards-text pt-4">WeatherInc HQ</h6> 
+              <h6 class="cards-text">77 weather st</h6>
+              <h6 class="cards-text">Beach Street, FL 22001 </h6>
+            </div>
+          </div>            
+        </div>
+        <div class="container-contact form-container">
+          <form method="POST" action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="form-group">                               
+                    {{ form_helper(form.firstname)}}    
+                    {{ form_helper(form.lastname)}}  
+                    {{ form_helper(form.businessemail)}} 
+                    {{ form_helper(form.phone)}} 
+                    {{ form_helper(form.message)}}  
+            </fieldset>           
+            {{ form.submit(class="btn btn-primary") }}
+        </form>
+        </div>
+    </div>
+    </div>  
+ {% endblock showcase %}

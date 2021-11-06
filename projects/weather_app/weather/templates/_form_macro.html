@@ -1,0 +1,15 @@
+{% macro form_helper(DisplayField) %}
+<div class="form-group">
+    {{ DisplayField.label(class="form-control-label") }}
+    {% if DisplayField.errors %}
+        {{ DisplayField(class="form-control form-control-lg is-invalid") }}
+        <div class="invalid-feedback">
+            {% for error in DisplayField.errors %}
+                <span>{{ error }}</span>
+            {% endfor %}
+        </div>
+    {% else %}
+        {{ DisplayField(class="form-control form-control-lg") }}
+    {% endif %}
+</div>    
+{% endmacro %}
